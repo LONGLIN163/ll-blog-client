@@ -1,4 +1,5 @@
-let ipUrl="http://127.0.0.1:7001/blog/";
+//let ipUrl="http://127.0.0.1:8080/blog/";
+let ipUrl="http://node-express-env.eba-5squvtpz.us-east-2.elasticbeanstalk.com/blog/";
 
 let servicePath = {
     getArticleList:ipUrl + 'getArticleList' ,  //  apiurl-home page
