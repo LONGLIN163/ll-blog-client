@@ -1,4 +1,4 @@
-//let ipUrl="http://127.0.0.1:8080/blog/";
+//let ipUrl="http://127.0.0.1:8081/blog/";
 let ipUrl="http://node-express-env.eba-5squvtpz.us-east-2.elasticbeanstalk.com/blog/";
 
 let servicePath = {
