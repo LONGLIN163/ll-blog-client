@@ -14,7 +14,9 @@ const Header = (props) => {
 
    useEffect(() => { 
       const fetchData=async ()=>{
-         const result=await axios(servicePath.getTypeInfo).then(
+         const result=await axios(servicePath.getTypeInfo,{
+            header:{ 'Access-Control-Allow-Origin':'*' }
+        }).then(
                (res)=>{
                   return res.data.data
                }
