@@ -9,7 +9,7 @@ const Author = () => {
                 <Avatar size={100} src="https://media-exp1.licdn.com/dms/image/C4D03AQEWfB9AxxGFGA/profile-displayphoto-shrink_400_400/0/1614599321512?e=1631145600&v=beta&t=EZ90iSmbU9sBmHrZjWZQQ6OP1TZ0cIeRrwuMq2XKEFw" />
             </div>
             <div className="author-introduction">
-                Me.See(WoCao Wuqing).then(Hello World!).then(WoW World).then(...)  
+                Share technology and share happiness!!! 
                 <Divider></Divider>
                 <Avatar size="28" icon={<GithubOutlined />} className="account" src="https://github.com/LONGLIN163"/>
                 <Avatar size="28" icon={<LinkedinOutlined />} className="account" src="https://www.linkedin.com/in/developerlin123/"/>
