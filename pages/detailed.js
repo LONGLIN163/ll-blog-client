@@ -100,12 +100,10 @@ import  servicePath  from '../config/apiUrl'
 }
 
 Detailed.getInitialProps=async(ctx)=>{
-  //console.log("ctx-----------:",ctx.query.id)
   let id=ctx.query.id;
   const promise=new Promise((resolve)=>{
       axios(servicePath.getArticleById+id).then(
           (res)=>{
-              //console.log("detailed-results:",res.data.data)
               resolve(res.data.data[0])
           }
       )

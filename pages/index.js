@@ -16,7 +16,6 @@ import 'highlight.js/styles/monokai-sublime.css';
 
 
  const Home=(results)=> {
-   //console.log("results---",results)
    const [list,setList]=useState(results.data)
    const [selflist,setSelfList]=useState(list)
 

@@ -18,7 +18,6 @@ import 'highlight.js/styles/monokai-sublime.css';
  const MyList=(results)=> {
 
   const [list,setMyList]=useState(results.data)
-  //console.log("MyList id----results.data----"+results.data)
 
  // after switch page, set new state
  useEffect(() => {
@@ -58,7 +57,6 @@ import 'highlight.js/styles/monokai-sublime.css';
               <Breadcrumb.Item>{results.data[0].typeName ? results.data[0].typeName : "other"}</Breadcrumb.Item>
           </div>
           <List 
-            //header={<h3>Latest Article</h3>}
             itemLayout="vertical"
             dataSource={list}
             renderItem={item => (
@@ -98,13 +96,9 @@ import 'highlight.js/styles/monokai-sublime.css';
 
 MyList.getInitialProps=async(ctx)=>{ // pass a context from last router(this page url)
   let id=ctx.query.id;
-  //console.log("MyList ctx----",ctx)
-  //console.log("MyList id----"+id)
   const promise=new Promise((resolve)=>{
       axios(servicePath.getListById+id).then(
           (res)=>{
-            //console.log("MyList res.data----"+res.data)
-            console.log("MyList res.data----"+JSON.stringify(res.data))
             resolve(res.data)
           }
       )  
