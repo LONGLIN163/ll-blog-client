@@ -2,7 +2,6 @@ import { Row,Col,Menu,Input } from "antd"
 import * as Icon from '@ant-design/icons';
 import React,{ useState,useEffect } from "react";
 import Router from "next/router"
-import Link from 'next/link'
 import axios from "axios";
 import  servicePath  from '../config/apiUrl'
 
@@ -14,19 +13,23 @@ const Header = (props) => {
 
    useEffect(() => { 
       const fetchData=async ()=>{
-         const result=await axios(servicePath.getTypeInfo,{
+         console.log(1)
+         console.log(servicePath.getTypeInfo)
+         const data=await axios(servicePath.getTypeInfo,{
             header:{ 'Access-Control-Allow-Origin':'*' }
-        }).then(
+         }).then(
                (res)=>{
+                  console.log(3)
+                  console.log(res.data.data)
                   return res.data.data
                }
          )
-         setNavArr(result)
+         setNavArr(data)
       }
       fetchData()
    },[])
 
-   
+
    const handleClick=(e)=>{
       if(e.key==0 || undefined){
          Router.push("/")
@@ -35,9 +38,7 @@ const Header = (props) => {
       }
    }
 
-
    const searchArticle = (e) => {
-
       let searkey=e.target.value;
       let resArr = []
       props.list.filter((item) =>{
@@ -61,7 +62,6 @@ const Header = (props) => {
                      />
                   </span>
                 </Col>
-
 
                 <Col xs={3} sm={4} md={14} lg={5} xl={6}>
                    <Menu mode="horizontal" onClick={handleClick}>
@@ -88,5 +88,4 @@ const Header = (props) => {
         </div>
      );
 }
- 
 export default Header;
