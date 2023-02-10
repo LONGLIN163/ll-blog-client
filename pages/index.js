@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Header from '../components/Header'
-import {Row,Col,List,Avatar } from 'antd'
+import {Row,Col,List } from 'antd'
 import { useState } from 'react'
 import {CalendarOutlined,FolderOpenOutlined,FireOutlined} from "@ant-design/icons"
 import Author from '../components/Author'

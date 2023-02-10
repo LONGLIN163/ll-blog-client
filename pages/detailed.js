@@ -7,7 +7,6 @@ import Author from '../components/Author'
 import Ads from '../components/Ads'
 import Footer from '../components/Footer'
 import 'markdown-navbar/dist/navbar.css';
-import MarkdownNavbar from 'markdown-navbar';
 import axios from "axios"
 
 import marked from "marked" // using for parse markdown text
@@ -57,11 +56,13 @@ import  servicePath  from '../config/apiUrl'
         <Col className="comm-left" xs={24} sm={24} md={16} lg={18} xl={14}  >
         <div>
             <div className="bread-div">
-                  <Breadcrumb.Item>
-                    <Link href="/"><a>Home</a></Link>
-                  </Breadcrumb.Item>
-                  <Breadcrumb.Item>{props.typeName}</Breadcrumb.Item>
-                  <Breadcrumb.Item>{props.title}</Breadcrumb.Item>
+              <Breadcrumb>
+                <Breadcrumb.Item>
+                  <Link href="/"><a>Home</a></Link>
+                </Breadcrumb.Item>
+                <Breadcrumb.Item>{props.typeName}</Breadcrumb.Item>
+                <Breadcrumb.Item>{props.title}</Breadcrumb.Item>
+              </Breadcrumb>
             </div>
             <div>
                 <div className="detailed-title">

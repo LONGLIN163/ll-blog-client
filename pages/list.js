@@ -51,10 +51,12 @@ import 'highlight.js/styles/monokai-sublime.css';
       <Row className="comm-main" type="flex" justify="center">
         <Col className="comm-left" xs={24} sm={24} md={16} lg={18} xl={14}  >
           <div>
+          <Breadcrumb>
               <Breadcrumb.Item>
-                <Link href="/"><a>Home</a></Link>
+                <Link href="/"><a >Home</a></Link>
               </Breadcrumb.Item>
               <Breadcrumb.Item>{results.data[0].typeName ? results.data[0].typeName : "other"}</Breadcrumb.Item>
+          </Breadcrumb>
           </div>
           <List 
             itemLayout="vertical"

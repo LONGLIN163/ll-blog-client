@@ -1,6 +1,9 @@
 
-let ipUrl="https://project-blog-service.herokuapp.com/blog/";
-//let ipUrl="http://localhost:8080/blog/";
+/***prod api***/
+//let ipUrl="https://project-blog-service.herokuapp.com/blog/";
+
+/***dev api***/
+let ipUrl="http://localhost:8080/blog/";
 
 let servicePath = {
     getArticleList:ipUrl + 'getArticleList' ,  //  apiurl-home page
