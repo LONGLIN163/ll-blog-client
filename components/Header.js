@@ -13,18 +13,23 @@ const Header = (props) => {
 
    useEffect(() => { 
       const fetchData=async ()=>{
-         console.log(1)
-         console.log(servicePath.getTypeInfo)
-         const data=await axios(servicePath.getTypeInfo,{
-            header:{ 'Access-Control-Allow-Origin':'*' }
-         }).then(
-               (res)=>{
-                  console.log(3)
-                  console.log(res.data.data)
-                  return res.data.data
-               }
-         )
-         setNavArr(data)
+         try {
+            console.log(1)
+            console.log(servicePath.getTypeInfo)
+            const data=await axios(servicePath.getTypeInfo,{
+               header:{ 'Access-Control-Allow-Origin':'*' }
+            }).then(
+                  (res)=>{
+                     console.log(3)
+                     console.log(res.data.data)
+                     return res.data.data
+                  }
+            )
+            setNavArr(data)
+         } catch (error) {
+            console.log(error);
+            // Do something with error
+         }
       }
       fetchData()
    },[])
