@@ -3,7 +3,7 @@
 //let ipUrl="https://project-blog-service.herokuapp.com/blog/";
 
 /***prod api aws***/
-let ipUrl="http://blogservice-env.eba-iz3rabdz.us-east-1.elasticbeanstalk.com/blog/";
+let ipUrl="https://tikitikihot.com/blog/";
 
 /***dev api***/
 //let ipUrl="http://localhost:8080/blog/";
